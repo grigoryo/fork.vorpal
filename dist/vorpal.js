@@ -1115,7 +1115,7 @@ vorpal._commandHelp = function (command) {
   var commandMatchLength = commandMatch ? String(command).trim().split(' ').length + 1 : 1;
   matches = matches.length === 0 ? this.commands : matches;
 
-  var skipGroups = !(matches.length + 6 > process.stdout.rows);
+  var skipGroups = false;
 
   var commands = matches.filter(function (cmd) {
     return !cmd._noHelp;
